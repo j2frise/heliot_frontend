@@ -1,0 +1,29 @@
+h5.classRoomTitle {
+    font-family: 'Gotham-Light';
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    text-align: left;
+}
+
+.classRomeTextContainer {
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-family: 'Gotham-Light';
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+    }
+}
+
+.ClassRoomStatus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    width: 117.45px;
+    height: 25.44px;
+    background: rgba(0, 151, 124, 0.34);
+    border-radius: 50px;
+}

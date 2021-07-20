@@ -76,6 +76,30 @@ export const CounterWidget = (props) => {
   );
 };
 
+export const RoomsBlock = (props) => {
+  const { classTitle, building, floor, image } = props;
+
+  return (
+    <Card className="border-0">
+      <Card.Body className="p-0">
+        <div className="d-block d-xl-flex-column align-items-center text-center">
+          <img src={image} alt="classRoom" />
+          <div className="ClassRoomStatus">
+            Disponible
+          </div>
+          <div>
+            <h5 class="classRoomTitle">{classTitle}</h5>
+            <div className="classRomeTextContainer">
+              <p className="mb-1 small">{building}</p>
+              <p className="mb-1 small">{floor}</p>
+            </div>
+          </div>
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
+
 export const CircleChartWidget = (props) => {
   const { title, data = [] } = props;
   const series = data.map(d => d.value);
