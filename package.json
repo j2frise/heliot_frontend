@@ -1,0 +1,88 @@
+{
+  "name": "@heliot/front-iot-data",
+  "description": "Frontend des datas IoT HETIC",
+  "author": "Jarce boukoro",
+  "keywords": [
+    "bootstrap 5",
+    "react",
+    "iot",
+    "smart building",
+    "heliot"
+  ],
+  "license": "MIT",
+  "homepage": "#",
+  "bugs": {
+    "url": "#"
+  },
+  "repository": {
+    "type": "git",
+    "url": "#"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "@ashvin27/react-datatable": "^1.5.3",
+    "@azure/msal-browser": "^2.14.2",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@reduxjs/toolkit": "^1.6.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@themesberg/react-bootstrap": "^1.4.1",
+    "axios": "^0.21.1",
+    "bootstrap": "5.0.0-beta1",
+    "chartist": "^0.11.4",
+    "chartist-plugin-tooltips-updated": "^0.1.4",
+    "history": "^5.0.0",
+    "js-cookie": "^2.2.1",
+    "mdbreact": "^5.0.2",
+    "moment-timezone": "^0.5.31",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-bootstrap-typeahead": "^5.1.4",
+    "react-chartist": "^0.14.3",
+    "react-copy-to-clipboard": "^5.0.3",
+    "react-csv": "^2.0.3",
+    "react-datatable": "0.0.31",
+    "react-datetime": "^3.0.4",
+    "react-dom": "^16.13.1",
+    "react-github-btn": "^1.2.0",
+    "react-google-button": "^0.7.2",
+    "react-live": "^2.2.3",
+    "react-redux": "^7.2.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.3.1",
+    "react-scripts": "3.4.3",
+    "react-transition-group": "^4.4.1",
+    "redux-logger": "^3.0.6",
+    "simplebar-react": "^2.3.0",
+    "styled-component": "^2.8.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build-local": "PUBLIC_URL=./ react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
