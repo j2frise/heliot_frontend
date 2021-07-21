@@ -119,7 +119,7 @@ export const DropdownMenu = (props) => {
   return (
     <select class="form-select DropdownMenu">
       <option selected>{title}</option>
-      <option value={optionValue1}>{optionValue1}</option>
+      <option value={title + optionValue1}>{optionValue1}</option>
       <option value={optionValue2}>{optionValue2}</option>
       <option value={optionValue3}>{optionValue3}</option>
       <option value={optionValue4}>{optionValue4}</option>
