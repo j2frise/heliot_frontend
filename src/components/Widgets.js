@@ -77,18 +77,29 @@ export const CounterWidget = (props) => {
 };
 
 export const RoomsBlock = (props) => {
-  const { classTitle, building, floor, image } = props;
+  const { classTitle, building, floor, image, status } = props;
+
+  let classes = "ClassRoomStatus";
+  if (props.status === 'Disponible') {
+    classes += " disponible"
+  } else if (props.status === 'Occupé') {
+    classes += " occupe"
+  } else if (props.status === 'Réservé') {
+    classes += " reserve"
+  }
+
+  console.log(props.status);
 
   return (
     <Card className="border-0">
       <Card.Body className="p-0">
         <div className="d-block d-xl-flex-column align-items-center text-center">
           <img src={image} alt="classRoom" />
-          <div className="ClassRoomStatus">
-            Disponible
+          <div className={classes}>
+            {status}
           </div>
           <div>
-            <h5 class="classRoomTitle">{classTitle}</h5>
+            <h5 className="classRoomTitle">{classTitle}</h5>
             <div className="classRomeTextContainer">
               <p className="mb-1 small">{building}</p>
               <p className="mb-1 small">{floor}</p>
@@ -97,6 +108,23 @@ export const RoomsBlock = (props) => {
         </div>
       </Card.Body>
     </Card>
+  );
+};
+
+export const DropdownMenu = (props) => {
+
+  const { title, optionValue1, optionValue2, optionValue3, optionValue4, optionValue5 } = props;
+
+  
+  return (
+    <select class="form-select DropdownMenu">
+      <option selected>{title}</option>
+      <option value={optionValue1}>{optionValue1}</option>
+      <option value={optionValue2}>{optionValue2}</option>
+      <option value={optionValue3}>{optionValue3}</option>
+      <option value={optionValue4}>{optionValue4}</option>
+      <option value={optionValue5}>{optionValue5}</option>
+    </select>
   );
 };
 

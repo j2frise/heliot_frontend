@@ -24,6 +24,23 @@ h5.classRoomTitle {
     color: white;
     width: 117.45px;
     height: 25.44px;
-    background: rgba(0, 151, 124, 0.34);
     border-radius: 50px;
+    &.disponible {
+        background: rgba(0, 151, 124, 0.34);
+    }
+    &.occupe {
+        background: rgba(208, 1, 1, 0.34);
+    }
+    &.reserve {
+        background: rgba(254, 122, 0, 0.34);
+    }
+}
+
+.DropdownMenu {
+    width: 184px;
+    height: 40px;
+    display: inline;
+    margin-right: 20px;
+    border-radius: 0;
+    cursor: pointer;
 }
