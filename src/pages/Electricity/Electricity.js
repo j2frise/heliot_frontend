@@ -2,7 +2,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faDoorOpen, faLightbulb, faThermometerHalf, faCloud } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Button, Dropdown, Card, Tab, ListGroup, Image, Alert } from '@themesberg/react-bootstrap';
+import { Col, Row, Button, Dropdown, Card, Tab, ListGroup, Image, Alert, Table } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Routes } from "../../routes";
 
@@ -207,6 +207,42 @@ export default () => {
         </Card>
         </Col>
 
+      </Row>
+
+      <Row className="justify-content-md-left ml-5 mt-4" style={{ marginLeft: "10px" }}>
+      
+      <Table style={{borderRadius: "5px", boxShadow: "1px 5px 5px #e2e2e2", border: "1px solid #eeeeee", width: "58%", marginLeft: "10px"}}>
+        <tbody>
+          <tr>
+          <h5 style={{ marginLeft: "0px", marginTop: "10px" }}>Programme personnalisable</h5>
+          </tr>
+          <tr>
+            <td>B200</td>
+            <td>De 9h00</td>
+            <td>à 12h30</td>
+            <td><Button variant="warning" size='sm'>Veille</Button></td>
+          </tr>
+          <tr>
+            <td>A103</td>
+            <td>De 12h00</td>
+            <td>à 13h30</td>
+            <td><Button variant="warning" size='sm'>Veille</Button></td>
+          </tr>
+          <tr>
+            <td>C02</td>
+            <td>De 10h00</td>
+            <td>à 12h30</td>
+            <td><Button variant="warning" size='sm'>Veille</Button></td>
+          </tr>
+          <tr>
+            <td>B205</td>
+            <td>De 15h00</td>
+            <td>à 17h30</td>
+            <td><Button variant="warning" size='sm'>Veille</Button></td>
+          </tr>
+        </tbody>
+      </Table>
+        
       </Row>
 
     </>
