@@ -9568,7 +9568,7 @@
     "inherits" "^2.0.1"
     "safe-buffer" "^5.1.2"
 
-"mdbreact@^5.0.2":
+"mdbreact@^5.1.0":
   "integrity" "sha512-l6h01ddV9eMacYHWyH8Np/rHz+/xZP21SeS7EnxZVE03RVXc993IbJFv2YgmNMWcK5NxE6uLgB+EqTQhLiOICw=="
   "resolved" "https://registry.npmjs.org/mdbreact/-/mdbreact-5.1.0.tgz"
   "version" "5.1.0"

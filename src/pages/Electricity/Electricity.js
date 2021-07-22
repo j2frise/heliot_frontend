@@ -20,7 +20,7 @@ import { CounterWidgetWhite } from "../../components/Widgets";
 import { CounterWidget2 } from "../../components/Widgets";
 import { trafficShares } from "../../data/charts";
 
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import Linecharts from "../components/Linecharts";
 
 export default () => {
   return (
@@ -39,8 +39,8 @@ export default () => {
             <Card.Text style={{fontWeight: '700'}}>
               243 000 kwh
             </Card.Text>
-            <img style={{width: "700px"}} src={ChartBody} />
-           
+            {/* <img style={{width: "700px"}} src={ChartBody} /> */}
+           <Linecharts />
             
           </Card.Body>
         </Card>

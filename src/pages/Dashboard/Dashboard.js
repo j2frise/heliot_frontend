@@ -15,6 +15,8 @@ import { CounterWidgetWhite } from "../../components/Widgets";
 import { CounterWidget2 } from "../../components/Widgets";
 import { trafficShares } from "../../data/charts";
 
+import Linecharts from "../components/Linecharts";
+
 export default () => {
   return (
     <>
@@ -70,7 +72,7 @@ export default () => {
               243 000 kwh
             </Card.Text>
             <img src={Graph} />
-           
+            
             
           </Card.Body>
         </Card>
