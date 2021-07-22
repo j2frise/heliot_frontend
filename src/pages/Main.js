@@ -4,7 +4,9 @@ import { Routes } from "../routes";
 import { SessionContext, getSessionCookie, setSessionCookie } from "../context/session";
 
 import { config } from '../config';
-import {auth} from '../data/Users'
+import { auth } from '../data/Users'
+
+
 
 // pages
 import NotFoundPage from "./Error/NotFound";

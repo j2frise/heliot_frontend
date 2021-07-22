@@ -1,10 +1,12 @@
 
 import React from "react";
+import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp, faChartArea, faChartBar, faChartLine, faFlagUsa, faFolderOpen, faGlobeEurope, faPaperclip, faUserPlus, faLongArrowAltRight, faCaretRight, faUsers, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faAngular, faBootstrap, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
 import { Col, Row, Card, Image, Button, ListGroup, ProgressBar } from '@themesberg/react-bootstrap';
 import { CircleChart, BarChart, SalesValueChart, SalesValueChartphone } from "./Charts";
+// import CustomizedColorPicker from "./colorPicker";
 
 import ProfileCover from "../assets/img/profile-cover.jpg";
 
@@ -127,6 +129,194 @@ export const DropdownMenu = (props) => {
     </select>
   );
 };
+
+export const SwitchButton = (props) => {
+
+  const { title } = props;
+
+  return (
+    <div class="form-check form-switch">
+      <input class="form-check-input SwitchButtonInput" type="checkbox" id="flexSwitchCheckDefault" />
+      <label class="form-check-label" for="flexSwitchCheckDefault">{title}</label>
+    </div>
+  );
+};
+
+export const Banner = (props) => {
+  const { image, roomTitle, bulding, floor } = props;
+
+  return (
+    <div className="banner" style={{marginBottom: '-100px'}}>
+      <img src={image} alt="banner" className="imageBanner" />
+      <div className="bannerContent">
+        <h2>{roomTitle}</h2>
+        <div className="bannerContentRightColumn">
+          <p>{bulding}</p>
+          <p>{floor}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const ConnectedObjects = (props) => {
+  const { title, icon, objectName, objectModel } = props;
+
+  return (
+    <Card className="ConnectedObjects">
+      <Card.Body>
+        <p>{title}</p>
+        <div className="ConnectedObjectsList">
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
+
+export const ChartsPagePro1 = (props) => {
+  const { title } = props;
+
+  return(
+  <Card>
+    <Card.Body>
+      <p>{title}</p>
+    </Card.Body>
+    </Card>
+  )
+};
+
+export const ChartsPagePro2 = (props) => {
+  const { title } = props;
+
+  return(
+  <Card className="HasMarginTop">
+    <Card.Body>
+      <p>{title}</p>
+    </Card.Body>
+    </Card>
+  )
+};
+
+export const Intensity = (props) => {
+  const { title } = props;
+
+  return (
+    <Card>
+      <Card.Body>
+        <p>{title}</p>
+        <div className="progress IntensityProgressBar">
+          <div className="progress-bar" role="progressbar" style={{ width: "15%"}} aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+          <div className="progress-bar bg-success" role="progressbar" style={{ width: "70%"}} aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+          <div className="progress-bar bg-info" role="progressbar" style={{ width: "100%"}} aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </Card.Body>
+    </Card>
+  )
+}
+
+export const ColorPicker = (props) => {
+  const { title } = props;
+  
+  return (
+    <Card className="HasMarginTop">
+      <Card.Body>
+        <p>{title}</p>
+        <div className="ColorPickerProgressBar">
+          {/* <input type="color" id="favcolor" name="favcolor" value="#ff0000" /> */}
+          <div className="progress IntensityProgressBar">
+            <div className="progress-bar bg-info" role="progressbar" style={{ width: "100%"}} aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </Card.Body>
+    </Card>
+  )
+
+}
 
 export const CircleChartWidget = (props) => {
   const { title, data = [] } = props;
@@ -414,3 +604,4 @@ export const AcquisitionWidget = () => {
     </Card>
   );
 };
+

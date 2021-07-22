@@ -2,8 +2,7 @@
 import React from "react";
 import { Col, Row, Button, Dropdown } from '@themesberg/react-bootstrap';
 
-import { RoomsBlock } from "../../components/Widgets";
-import { DropdownMenu } from "../../components/Widgets";
+import { RoomsBlock, DropdownMenu } from "../../components/Widgets";
 import classRoomImage from "../../assets/img/classroom.png";
 
 export default () => {

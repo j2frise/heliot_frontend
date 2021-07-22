@@ -13,6 +13,10 @@ import "./scss/heliot.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "react-datetime/css/react-datetime.css";
 
+// import '@fortawesome/fontawesome-free/css/all.min.css';
+// import 'bootstrap-css-only/css/bootstrap.min.css';
+// import 'mdbreact/dist/css/mdb.css';
+
 import Main from "./pages/Main";
 import ScrollToTop from "./components/ScrollToTop";
 
