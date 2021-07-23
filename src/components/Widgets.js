@@ -76,6 +76,44 @@ export const CounterWidget = (props) => {
   );
 };
 
+export const CounterWidget2 = (props) => {
+  const { icon, title, titleWhite, stat, statWhite } = props;
+
+  return (
+    <Card Card style={{ border: "none", background: "transparent"}} className="shadow-sm">
+      <Card.Body>
+        <div className="d-block d-xl-flex-column align-items-center text-center">
+          <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+            <FontAwesomeIcon icon={icon} />
+          </div>
+          <h5>{stat}</h5>
+          <p className="mb-1 small">{title}</p>
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
+
+export const CounterWidgetWhite = (props) => {
+  const { icon, title, titleWhite, stat, statWhite } = props;
+
+  return (
+    <Card Card style={{ border: "none", background: "transparent"}} className="shadow-sm">
+      <Card.Body>
+        <div className="d-block d-xl-flex-column align-items-center text-center">
+          <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+            <FontAwesomeIcon icon={icon} />
+          </div>
+          <h5>{stat}</h5>
+          <h5 style={{color:"white"}}>{statWhite}</h5>
+          <p className="mb-1 small">{title}</p>
+          <p className="mb-1 small" style={{color:"white"}}>{titleWhite}</p>
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
+
 export const CircleChartWidget = (props) => {
   const { title, data = [] } = props;
   const series = data.map(d => d.value);

@@ -20,6 +20,7 @@
   },
   "version": "1.0.0",
   "dependencies": {
+    "@amcharts/amcharts4": "^4.10.20",
     "@ashvin27/react-datatable": "^1.5.3",
     "@azure/msal-browser": "^2.14.2",
     "@fortawesome/fontawesome-free": "^5.15.1",
@@ -39,7 +40,7 @@
     "chartist-plugin-tooltips-updated": "^0.1.4",
     "history": "^5.0.0",
     "js-cookie": "^2.2.1",
-    "mdbreact": "^5.0.2",
+    "mdbreact": "^5.1.0",
     "moment-timezone": "^0.5.31",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -59,6 +60,7 @@
     "react-router-hash-link": "^2.3.1",
     "react-scripts": "3.4.3",
     "react-transition-group": "^4.4.1",
+    "recharts": "^2.0.10",
     "redux-logger": "^3.0.6",
     "simplebar-react": "^2.3.0",
     "styled-component": "^2.8.0"
