@@ -1,9 +1,9 @@
 import axios from "axios";
 import { getSessionCookie } from "../context/session";
-import {config} from '../config'
+import {url} from '../config'
 import Cookies from "js-cookie";
 
-export function requestFetch(server, method, uri, data = null) {
+export function requestFetch(method, uri, data = null) {
     const token = getSessionCookie().accessToken?getSessionCookie().accessToken:null;
 
     if (!uri) {
@@ -11,7 +11,7 @@ export function requestFetch(server, method, uri, data = null) {
         return
     }
 
-    var url = server + uri
+    var urlAPi = url.backend + uri
     var setUrl
     var headers = {'Content-Type': 'application/json'}
     
@@ -23,7 +23,7 @@ export function requestFetch(server, method, uri, data = null) {
     }
     
     if(method === 'get' || method === 'delete') {
-        setUrl = data === null? fetch(url, {method: method.toUpperCase(), headers: headers}): fetch(`${url}?${data}`, {method: method.toUpperCase(), headers: headers})
+        setUrl = data === null? fetch(urlAPi, {method: method.toUpperCase(), headers: headers}): fetch(`${urlAPi}?${data}`, {method: method.toUpperCase(), headers: headers})
     } else if(method === 'post' || method === 'put') {
         if(data === null) {
             data = {}
@@ -35,7 +35,7 @@ export function requestFetch(server, method, uri, data = null) {
                         headers: headers,
                         body: data
                     }
-        setUrl = fetch(url,options)
+        setUrl = fetch(urlAPi,options)
     } else if(method === 'post_file' || method === 'put_file') {
         var myMethod = method === 'post_file'?"POST":"PUT";
         
@@ -51,7 +51,7 @@ export function requestFetch(server, method, uri, data = null) {
                 headers: headers,
                 body: data
             }
-        setUrl = fetch(url, options)
+        setUrl = fetch(urlAPi, options)
     } else {
         console.error('cette methode n\'est pas prise en compte par l\'api')
         return
@@ -60,7 +60,7 @@ export function requestFetch(server, method, uri, data = null) {
     .then(response => response.json())  
 }
 
-export async function requestAxios(server, method, uri, data = null) {
+export async function requestAxios(method, uri, data = null) {
     const $load = document.querySelector(".loader")
     const $offline = document.querySelector(".offline")
 
@@ -72,7 +72,7 @@ export async function requestAxios(server, method, uri, data = null) {
             console.error('fonction de api requiere uri')
             return
         }
-        var url = server + uri
+        var urlAPi = url.backend + uri
         var headers = {'Content-Type': 'application/json'}
         let request
         method = method.toLowerCase()
@@ -86,9 +86,9 @@ export async function requestAxios(server, method, uri, data = null) {
             var config = {method,headers}
         
             if(data === null){
-                config.url= url
+                config.url= urlAPi
             } else {
-                config.url= url+'?'+data
+                config.url= urlAPi+'?'+data
             }
             request = await axios(config);
         } else if(method === 'post' || method === 'put') {
@@ -100,7 +100,7 @@ export async function requestAxios(server, method, uri, data = null) {
             let options = {
                 headers: headers
             }
-            request = await axios[method](url, data, options);
+            request = await axios[method](urlAPi, data, options);
         } else {
             if($load)$load.classList.add('hide')
             return 'cette methode n\'est pas prise en compte par l\'api'
@@ -117,17 +117,9 @@ export async function requestAxios(server, method, uri, data = null) {
         else {
             if($offline)$load.classList.add('add')
             let req = error.response.data.message
-            if(req === "Unauthorized"){
-                if($load)$load.classList.add('hide')
-                alert("Votre session a expiré, veuillez vous reconnecter");
-                if(getSessionCookie().user){
-                    let email = getSessionCookie().user.email;
-                    Cookies.remove("session");
-                }
-            } else{
-                if($load)$load.classList.add('hide')
-                return req
-            }
+        
+            if($load)$load.classList.add('hide')
+            return req
         }
     }
 }

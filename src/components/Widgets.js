@@ -1,5 +1,6 @@
 
 import React from "react";
+import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp, faChartArea, faChartBar, faChartLine, faFlagUsa, faFolderOpen, faGlobeEurope, faPaperclip, faUserPlus, faLongArrowAltRight, faCaretRight, faUsers, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faAngular, faBootstrap, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
@@ -70,6 +71,41 @@ export const CounterWidget = (props) => {
           </div>
           <h5>{stat}</h5>
           <p className="mb-1 small">{title}</p>
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
+
+export const RoomsBlock = (props) => {
+  const { classTitle, building, floor, image, status } = props;
+
+  let classes = "ClassRoomStatus";
+  if (props.status === 'Disponible') {
+    classes += " disponible"
+  } else if (props.status === 'Occupé') {
+    classes += " occupe"
+  } else if (props.status === 'Réservé') {
+    classes += " reserve"
+  }
+
+  console.log(props.status);
+
+  return (
+    <Card className="border-0">
+      <Card.Body className="p-0">
+        <div className="d-block d-xl-flex-column align-items-center text-center">
+          <img src={image} alt="classRoom" />
+          <div className={classes}>
+            {status}
+          </div>
+          <div>
+            <h5 className="classRoomTitle">{classTitle}</h5>
+            <div className="classRomeTextContainer">
+              <p className="mb-1 small">{building}</p>
+              <p className="mb-1 small">{floor}</p>
+            </div>
+          </div>
         </div>
       </Card.Body>
     </Card>
@@ -400,3 +436,210 @@ export const AcquisitionWidget = () => {
     </Card>
   );
 };
+
+
+export const DropdownMenu = (props) => {
+
+  const { title, optionValue1, optionValue2, optionValue3, optionValue4, optionValue5 } = props;
+
+  
+  return (
+    <select class="form-select DropdownMenu">
+      <option selected>{title}</option>
+      <option value={title + optionValue1}>{optionValue1}</option>
+      <option value={optionValue2}>{optionValue2}</option>
+      <option value={optionValue3}>{optionValue3}</option>
+      <option value={optionValue4}>{optionValue4}</option>
+      <option value={optionValue5}>{optionValue5}</option>
+    </select>
+  );
+};
+
+export const SwitchButton = (props) => {
+
+  const { title } = props;
+
+  return (
+    <div class="form-check form-switch">
+      <input class="form-check-input SwitchButtonInput" type="checkbox" id="flexSwitchCheckDefault" />
+      <label class="form-check-label" for="flexSwitchCheckDefault">{title}</label>
+    </div>
+  );
+};
+
+export const Banner = (props) => {
+  const { image, roomTitle, bulding, floor } = props;
+
+  return (
+    <div className="banner" style={{marginBottom: '-100px'}}>
+      <img src={image} alt="banner" className="imageBanner" />
+      <div className="bannerContent">
+        <h2>{roomTitle}</h2>
+        <div className="bannerContentRightColumn">
+          <p>{bulding}</p>
+          <p>{floor}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const ConnectedObjects = (props) => {
+  const { title, icon, objectName, objectModel } = props;
+
+  return (
+    <Card className="ConnectedObjects">
+      <Card.Body>
+        <p>{title}</p>
+        <div className="ConnectedObjectsList">
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          <div className="ConnectedObject">
+            <div className={`icon icon-shape icon-md rounded me-4 me-sm-0`}>
+              <FontAwesomeIcon icon={icon} />
+            </div>
+            <p>
+              {objectName}
+            </p>
+            <p>
+              {objectModel}
+            </p>
+            <div className="form-check form-switch">
+              <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            </div>
+          </div>
+          
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
+
+export const ChartsPagePro1 = (props) => {
+  const { title } = props;
+
+  return(
+  <Card>
+    <Card.Body>
+      <p>{title}</p>
+    </Card.Body>
+    </Card>
+  )
+};
+
+export const ChartsPagePro2 = (props) => {
+  const { title } = props;
+
+  return(
+  <Card className="HasMarginTop">
+    <Card.Body>
+      <p>{title}</p>
+    </Card.Body>
+    </Card>
+  )
+};
+
+export const Intensity = (props) => {
+  const { title } = props;
+
+  return (
+    <Card>
+      <Card.Body>
+        <p>{title}</p>
+        <div className="progress IntensityProgressBar">
+          <div className="progress-bar" role="progressbar" style={{ width: "15%"}} aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+          <div className="progress-bar bg-success" role="progressbar" style={{ width: "70%"}} aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+          <div className="progress-bar bg-info" role="progressbar" style={{ width: "100%"}} aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </Card.Body>
+    </Card>
+  )
+}
+
+export const ColorPicker = (props) => {
+  const { title } = props;
+  
+  return (
+    <Card className="HasMarginTop">
+      <Card.Body>
+        <p>{title}</p>
+        <div className="ColorPickerProgressBar">
+          {/* <input type="color" id="favcolor" name="favcolor" value="#ff0000" /> */}
+          <div className="progress IntensityProgressBar">
+            <div className="progress-bar bg-info" role="progressbar" style={{ width: "100%"}} aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </Card.Body>
+    </Card>
+  )
+
+}
+

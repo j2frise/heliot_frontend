@@ -525,6 +525,68 @@ $embed-responsive-aspect-ratios: (
 $fontawesome-webfonts-path:   '../vendor/font-awesome/webfonts';
 $font-awesome-5:              'Font Awesome 5 Free';
 
+// font gotham
+
+@font-face {
+ font-family: "Gotham-Black";
+ src: url("../../../src/assets/fonts/Gotham-Black.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-Black.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Gotham-Bold";
+ src: url("../../../src/assets/fonts/Gotham-Bold.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-Bold.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Gotham-BookItalic";
+ src: url("../../../src/assets/fonts/Gotham-BookItalic.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-BookItalic.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Gotham-Light";
+ src: url("../../../src/assets/fonts/Gotham-Light.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-Light.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Gotham-Thin";
+ src: url("../../../src/assets/fonts/Gotham-Thin.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-Thin.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Gotham-ThinItalic";
+ src: url("../../../src/assets/fonts/Gotham-ThinItalic.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-ThinItalic.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Gotham-UltraItalic";
+ src: url("../../../src/assets/fonts/Gotham-UltraItalic.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-UltraItalic.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Gotham-XLight";
+ src: url("../../../src/assets/fonts/Gotham-XLight.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-XLight.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Gotham-XLightItalic";
+ src: url("../../../src/assets/fonts/Gotham-XLightItalic.woff2") format("woff2"),
+        url("../../../src/assets/fonts/Gotham-XLightItalic.woff") format("woff");
+}
+
+@font-face {
+ font-family: "GothamBook";
+ src: url("../../../src/assets/fonts/GothamBook.woff2") format("woff2"),
+        url("../../../src/assets/fonts/GothamBook.woff") format("woff");
+}
+
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      'Nunito Sans', sans-serif;
 // stylelint-enable value-keyword-case
